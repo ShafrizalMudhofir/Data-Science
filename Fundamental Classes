@@ -1,0 +1,152 @@
+#R Fundamental part 1
+> #Berapa Hasil dari 15 + 46
+> 15 + 46
+
+> #Berapa Hasil dari 65 / 13
+> 65/13
+
+> #Berapa Hasil dari 28 %% 5 untuk sisa bagi
+> 28 %% 5
+
+> #Berapa Hasil dari 4 ^ 5
+> 4^5
+
+> #Populasi manusia tahun depan
+> 7900000000 * 1.01
+[1] 7.979e+09
+
+> #Populasi manusia dua tahun mendatang
+> 7900000000 * 1.01 * 1.01
+[1] 8058790000
+
+> #Populasi manusia sepuluh tahun mendatang
+> 7900000000 * 1.01^10
+[1] 8726514791
+
+> #Simpan nilai apel ke dalam variable bernama ‘apel’
+> apel <- 5
+
+> #Simpan nilai jeruk ke dalam variable bernama ‘jeruk’
+> jeruk <- 7
+
+> #Tampilkan nilai dari variable ‘jeruk’
+> jeruk
+[1] 7
+
+> #Kamu memiliki 5 apel dan 7 jeruk
+> apel <- 5
+
+> jeruk <- 7
+
+> #Jumlahkan buah-buahan yang kamu miliki
+> apel + jeruk
+[1] 12
+
+> #Simpan apel + jeruk ke dalam variable 'buah'
+> buah <- apel + jeruk
+
+> #buat variable data_numerik_1 yang berisi 7
+> data_numerik_1 <- 7
+
+> #buat variable data_numerik_2 yang berisi 77.7
+> data_numerik_2 <- 77.7
+
+> #buat variable data_character yang berisi "Belajar Data Science Sangat Menyenangkan!"
+> data_character <- "Belajar Data Science Sangat Menyenangkan!"
+
+> #buat variable data_logical yang berisi TRUE
+> data_logical <- TRUE
+
+> #buat variable data_numerik_1 yang berisi 7
+> data_numerik_1 <- 7
+
+> class(data_numerik_1)
+[1] "numeric"
+
+> #buat variable data_numerik_2 yang berisi 77.7
+> data_numerik_2 <- 77.7
+
+> class(data_numerik_2)
+[1] "numeric"
+
+> #buat variable data_character yang berisi "Belajar Data Science Sangat Menyenangkan!"
+> data_character <- "Belajar Data Science Sangat Menyenangkan!"
+
+> class(data_character)
+[1] "character"
+
+> #buat variable data_logical yang berisi TRUE
+> data_logical <- TRUE
+
+> class(data_logical)
+[1] "logical"
+
+> #Hitunglah factorial dari 10
+> factorial(10)
+[1] 3628800
+
+> #Hitunglah factorial dari 10
+> factorial(10)
+[1] 3628800
+
+> #Tampilkan 5 bilangan acak yang memiliki distribusi normal
+> rnorm(5,mean=0,sd=1)
+[1]  0.2937760  0.4331515  1.7439338  0.9100402 -0.5271030
+
+> #Buatlah variabel bernama “my_variable” dan isilah dengan angka 345.678
+> my_variable <- 345.678
+
+> #Berapakah bilangan terkecil yang lebih besar atau sama dengan my_variable?
+> ceiling(my_variable)
+[1] 346
+
+> #Berapakah bilangan terbesar yang lebih kecil atau sama dengan my_variable?
+> floor(my_variable)
+[1] 345
+
+> #Bulatkan my_variable hingga 1 angka di belakang koma
+> round(my_variable, digits=1)
+[1] 345.7
+
+> as.Date("2021-12-31", "%Y-%m-%d")
+[1] "2021-12-31"
+
+> as.Date("7 July 2007", "%d %B %Y")
+[1] "2007-07-07"
+
+> as.Date("1 Jan 70", "%d %b %y")
+[1] "1970-01-01"
+
+> #Cek tipe data dari my_date
+> my_date <- as.Date("Dec 25, 2021", "%b %d,%Y")
+
+> class(my_date)
+[1] "Date"
+
+> #variable hari_pahlawan
+> hari_pahlawan <- as.Date("Nov 10, 2021", "%b %d, %Y")
+
+> #menampilkan variable hari_pahlawan
+> hari_pahlawan
+[1] "2021-11-10"
+
+> #variable radius
+> radius <- 15
+
+> #variable luas_lingkaran
+> luas_lingkaran <- 3.14 * radius ^ 2
+
+> #menampilkan variable luas_lingkaran
+> luas_lingkaran
+[1] 706.5
+
+> #pembulatan ke atas luas_lingkaran
+> ceiling(luas_lingkaran)
+[1] 707
+
+> #pembulatan ke bawah luas_lingkaran
+> floor(luas_lingkaran)
+[1] 706
+
+
+
