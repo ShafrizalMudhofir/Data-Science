@@ -1,2 +1,219 @@
 #Part 2 for profosional
+#VEKTOR
+> #buat vector bernama my_numeric yang berisi angka 1 - 10
+> my_numeric<-c(1,2,3,4,5,6,7,8,9,10)
 
+> #buat vector bernama my_color yang berisi 'merah','kuning','hijau','biru','ungu'
+> my_color<-c('merah','kuning','hijau','biru','ungu')
+
+> #buat vector bernama my_logical yang berisi FALSE FALSE TRUE FALSE secara berurutan
+> my_logical<-c(FALSE,FALSE,TRUE,FALSE)
+
+> #Buat Vector Bernama "my_vector" yang Berisi Angka 1 - 25 menggunakan sequential numeric vector
+> my_vector<-c(1:25)
+
+> #Tampilkan isi dari my_vector
+> my_vector
+ [1]  1  2  3  4  5 
+
+> #vector_seq berisi angka 1 - 2 dengan interval 0.2
+> vector_seq<-seq(1,2,0.2)
+
+> vector_seq
+[1] 1.0 1.2 1.4 1.6 1.8 2.0
+
+> #my_vector berisi "Belajar", "Data Science", "di DQLab"
+> my_vector<-c("Belajar", "Data Science", "di DQLab")
+
+> my_vector
+[1] "Belajar"      "Data Science" "di DQLab"    
+
+> #vector_rep berisi perulangan my_vector sebanyak 3 kali
+> vector_rep<-rep(my_vector,3)
+
+> vector_rep
+[1] "Belajar"      "Data Science" "di DQLab"     "Belajar"      "Data Science"
+[6] "d
+
+> #Masukkan nama hari dari Senin - Jumat
+> nama_hari <- c("Senin","Selasa","Rabu","Kamis","Jumat")
+
+> #Masukkan jam kerja berurutan dari jam kerja di hari senin
+> jam_kerja <- c(8,7.5,10,7,7.5)
+
+> #Masukkan nama hari dari Senin - Jumat
+> nama_hari <- c("Senin","Selasa","Rabu","Kamis","Jumat")
+
+> #Masukkan jam kerja berurutan dari jam kerja di hari senin
+> jam_kerja <- c(8, 7.5, 10, 7, 7.5)
+
+> #Memberikan nama pada vector jam_kerja
+> names(jam_kerja)<-nama_hari
+
+> #Tampilkan isi jam_kerja sekarang
+> jam_kerja
+ Senin Selasa   Rabu  Kamis  Jumat 
+   8.0    7.5   10.0    7.0    7.5 
+> #Membuat vector berisi 7 angka dengan menggunakan function rnorm()
+> my_vector <-rnorm(7,mean=0,sd=1)
+
+> #Tampilkan isi my_vector
+> my_vector
+[1] -0.7146565  0.5798988  0.4171409  0.1211445  0.4922035  0.2327594  1.4048285
+
+> #Aplikasikan function rev(x) pada my_vector
+> rev(my_vector)
+[1]  1.4048285  0.2327594  0.4922035  0.1211445  0.4171409  0.5798988 -0.7146565
+
+> #Aplikasikan function max(x) pada my_vector
+> max(my_vector)
+[1] 1.404829
+
+> #Aplikasikan function min(x) pada my_vector
+> min(my_vector)
+[1] -0.7146565
+
+> #Aplikasikan function mean(x) pada my_vector
+> mean(my_vector)
+[1] 0.3619027
+
+> #Aplikasikan function diff(x) pada my_vector
+> diff(my_vector)
+[1]  1.2945553 -0.1627578 -0.2959965  0.3710591 -0.2594441  1.1720691
+
+> #Aplikasikan function sum(x) pada my_vector
+> sum(my_vector)
+[1] 2.533319
+
+> #Masukkan nama hari dari Senin - Jumat
+> nama_hari <- c("Senin","Selasa","Rabu","Kamis","Jumat")
+
+> #Masukkan jam kerja berurutan dari jam kerja di hari senin
+> jam_kerja <- c(8, 7.5, 10, 7, 7.5)
+
+> #Memberikan nama pada vector jam_kerja
+> names(jam_kerja) <- nama_hari
+
+> #Tampilkan isi jam_kerja sekarang
+> jam_kerja
+ Senin Selasa   Rabu  Kamis  Jumat 
+   8.0    7.5   10.0    7.0    7.5 
+
+> #Berapa total jam kerja Andra?
+> sum(jam_kerja)
+[1] 40
+
+> #Berapa durasi terlama Andra bekerja di minggu ini?
+> 8-min(jam_kerja)
+[1] 1
+
+> #Berapa durasi terlama Andra terlambat di minggu ini?
+> max(jam_kerja)
+[1] 10
+
+> #Berapa selisih antara jam kerja terlama dan terpendek Andra?
+> max(jam_kerja) - min(jam_kerja)
+[1] 3
+
+> #Masukkan nama hari dari Senin - Jumat
+> nama_hari <- c("Senin","Selasa","Rabu","Kamis","Jumat")
+
+> #Masukkan jam kerja berurutan dari jam kerja di hari senin
+> jam_kerja <- c(8, 7.5, 10, 7, 7.5)
+
+> #Memberikan nama pada vector jam_kerja
+> names(jam_kerja) <- nama_hari
+
+> #Tampilkan isi jam_kerja sekarang
+> jam_kerja
+ Senin Selasa   Rabu  Kamis  Jumat 
+   8.0    7.5   10.0    7.0    7.5 
+
+> #Jam kerja Andra di hari Senin
+> jam_kerja[1]
+Senin 
+    8 
+
+> #Jam kerja Andra di hari Senin - Rabu
+> jam_kerja[1:3]
+ Senin Selasa   Rabu 
+   8.0    7.5   10.0 
+
+> #Jam kerja Andra di hari Senin, Rabu, Jumat
+> jam_kerja[c(1,3,5)]
+Senin  Rabu Jumat 
+  8.0  10.0   7.5 
+
+> #Masukkan nama hari dari Senin - Jumat
+> nama_hari <- c("Senin","Selasa","Rabu","Kamis","Jumat")
+
+> #Masukkan jam kerja berurutan dari jam kerja di hari senin
+> jam_kerja <- c(8, 7.5, 10, 7, 7.5)
+
+> #Memberikan nama pada vector jam_kerja
+> names(jam_kerja) <- nama_hari
+
+> #Tampilkan isi jam_kerja sekarang
+> jam_kerja
+ Senin Selasa   Rabu  Kamis  Jumat 
+   8.0    7.5   10.0    7.0    7.5 
+
+> #Jam kerja Andra di hari Senin menggunakan nama
+> jam_kerja["Senin"]
+Senin 
+    8 
+
+> #Jam kerja Andra di hari Senin, Rabu, dan Jumat menggunakan nama
+> jam_kerja[c("Senin","Rabu","Jumat")]
+Senin  Rabu Jumat 
+  8.0  10.0   7.5 
+
+> #Selisih jam kerja Andra di hari Senin dengan hari Rabu
+> jam_kerja["Senin"]-jam_kerja["Rabu"]
+Senin 
+   -2 
+> #Masukkan nama hari dari Senin - Jumat
+> nama_hari <- c("Senin","Selasa","Rabu","Kamis","Jumat")
+
+> #Masukkan jam kerja berurutan dari jam kerja di hari senin
+> jam_kerja <- c(8, 7.5, 10, 7, 7.5)
+
+> #Memberikan nama pada vector jam_kerja
+> names(jam_kerja) <- nama_hari
+
+> #Tampilkan isi jam_kerja sekarang
+> jam_kerja
+ Senin Selasa   Rabu  Kamis  Jumat 
+   8.0    7.5   10.0    7.0    7.5 
+
+> #Tampilkan jam_kerja yang lebih kecil dibanding dengan jam kerja normal
+> jam_kerja[jam_kerja<8]
+Selasa  Kamis  Jumat 
+   7.5    7.0    7.5 
+
+> #Tampilkan jam_kerja yang lebih besar dibanding dengan jam kerja normal
+> jam_kerja[jam_kerja>8]
+Rabu 
+  10 
+
+> #variable sisa_cuti
+> sisa_cuti <- c(13,10,6,12,7)
+
+> #variable nama_karyawan
+> nama_karyawan <- c("Senja","Aksara","Antara","Kroma","Andra")
+
+> #memberi nama pada sisa_cuti
+> names(sisa_cuti) <- nama_karyawan
+
+> #karyawan yang memiliki sisa cuti lebih dari 10
+> sisa_cuti[sisa_cuti > 10]
+Senja Kroma 
+   13    12 
+
+> #karyawan dengan sisa cuti terkecil
+> min(sisa_cuti)
+[1] 6
+
+> #rata-rata sisa cuti karyawan
+> mean(sisa_cuti)
+[1] 9.6
