@@ -1,1 +1,498 @@
+#data frame
+> #tampilkan dataset mtcars
+> mtcars
+                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
+Hornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
+Hornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
+Valiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
+Duster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
+Merc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2
+Merc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2
+Merc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
+Merc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
+Merc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3
+Merc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3
+Merc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3
+Cadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4
+Lincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4
+Chrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4
+Fiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1
+Honda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2
+Toyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1
+Toyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1
+Dodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2
+AMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2
+Camaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4
+Pontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2
+Fiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1
+Porsche 914-2       26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2
+Lotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2
+Ford Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4
+Ferrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6
+Maserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8
+Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2
+
+
+
+> #Tampilkan 5 baris pertama dari Dataframe mtcars
+> head(mtcars,5)
+                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+
+> #Tampilkan 5 baris terakhir dari Dataframe mtcars
+> tail(mtcars,5)
+                mpg cyl  disp  hp drat    wt qsec vs am gear carb
+Lotus Europa   30.4   4  95.1 113 3.77 1.513 16.9  1  1    5    2
+Ford Pantera L 15.8   8 351.0 264 4.22 3.170 14.5  0  1    5    4
+Ferrari Dino   19.7   6 145.0 175 3.62 2.770 15.5  0  1    5    6
+Maserati Bora  15.0   8 301.0 335 3.54 3.570 14.6  0  1    5    8
+Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2
+
+
+> #Tampilkan struktur dari mtcars
+> str(mtcars)
+'data.frame':	32 obs. of  11 variables:
+ $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+ $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
+ $ disp: num  160 160 108 258 360 ...
+ $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...
+ $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+ $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...
+ $ qsec: num  16.5 17 18.6 19.4 17 ...
+ $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...
+ $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
+ $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
+ $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
+
+> #Buatlah sebuah vector berisi nama-nama anggota DQ Universe
+> dq_universe <- c("Kroma", "Andra", "Aksara", "Antara", "Senja", "Sunyi")
+
+> #Aplikasikan as.data.frame() untuk vector dq_universe
+> df <- as.data.frame(dq_universe)
+
+> #cek apakah variable df merupakan Dataframe
+> is.data.frame(df)
+[1] TRUE
+
+> #Buatlah vector sesuai dengan instruksi yang sudah diberikan
+> nama <- c("Kroma","Andra","Aksara","Antara","Senja")
+
+> pekerjaan <- c("Manager","Senior Data Scientist","Data Analyst","Data Engineer","Senior Data Analyst")
+
+> periode_kerja <- c(5,2,1,1,3)
+
+> #Gabungkan ketiga vector menjadi sebuah Dataframe menggunakan data.frame()
+> df <- data.frame(nama,pekerjaan,periode_kerja)
+
+> df
+    nama             pekerjaan periode_kerja
+1  Kroma               Manager             5
+2  Andra Senior Data Scientist             2
+3 Aksara          Data Analyst             1
+4 Antara         Data Engineer             1
+5  Senja   Senior Data Analyst             3
+
+> #cek apakah variable df merupakan Dataframe
+> is.data.frame(df)
+[1] TRUE
+
+#ELEMENT PADA DATA FRAME
+> #Konstruksi Dataframe
+> nama <- c("Kroma", "Andra", "Aksara", "Antara", "Senja")
+
+> pekerjaan <- c("Manager", "Senior Data Scientist", "Data Analyst", "Data Engineer", "Senior Data Analyst")
+
+> periode_kerja <- c(5,2,1,1,3)
+
+> df <- data.frame(nama,pekerjaan,periode_kerja)
+
+> #Tampilkan isi dari df
+> df
+    nama             pekerjaan periode_kerja
+1  Kroma               Manager             5
+2  Andra Senior Data Scientist             2
+3 Aksara          Data Analyst             1
+4 Antara         Data Engineer             1
+5  Senja   Senior Data Analyst             3
+
+> #Tampilkan jabatan dari Kroma
+> df[1,2]
+[1] "Manager"
+
+> #Tampilkan jabatan dari Senja
+> df[5,2]
+[1] "Senior Data Analyst"
+
+> #Tampilkan sudah berapa lama Andra bekerja di DQLab
+> df[2,3]
+[1] 2
+
+> #Tampilkan sudah berapa lama Aksara bekerja di DQLab
+> df[3,3]
+[1] 1
+
+> #Tampilkan semua informasi mengenai Antara
+> df[4,]
+    nama     pekerjaan periode_kerja
+4 Antara Data Engineer             1
+
+> #Konstruksi Dataframe
+> nama <- c("Kroma", "Andra", "Aksara", "Antara", "Senja")
+
+> pekerjaan <- c("Manager", "Senior Data Scientist", "Data Analyst", "Data Engineer", "Senior Data Analyst")
+
+> periode_kerja <- c(5,2,1,1,3)
+
+> df <- data.frame(nama,pekerjaan,periode_kerja)
+
+> #Tampilkan 3 baris pertama dari kolom 'pekerjaan'
+> df[1:3,"pekerjaan"]
+[1] "Manager"               "Senior Data Scientist" "Data Analyst"         
+
+> #Tampilkan 2 baris pertama dari kolom 'periode_kerja'
+> df[1:2,"periode_kerja"]
+[1] 5 2
+
+> #Konstruksi Dataframe
+> nama <- c("Kroma", "Andra", "Aksara", "Antara", "Senja")
+
+> pekerjaan <- c("Manager", "Senior Data Scientist", "Data Analyst", "Data Engineer", "Senior Data Analyst")
+
+> periode_kerja <- c(5,2,1,1,3)
+
+> df <- data.frame(nama,pekerjaan,periode_kerja)
+
+> #Tampilkan seluruh element pada kolom 'nama' dengan menggunakan $
+> df$nama
+[1] "Kroma"  "Andra"  "Aksara" "Antara" "Senja" 
+
+> #Tampilkan seluruh element pada kolom 'pekerjaan' dengan menggunakan $
+> df$pekerjaan
+[1] "Manager"               "Senior Data Scientist" "Data Analyst"         
+[4] "Data Engineer"         "Senior Data Analyst"  
+
+> #Tampilkan seluruh element pada kolom 'periode_kerja' dengan menggunakan $
+> df$periode_kerja
+[1] 5 2 1 1 3
+
+
+> #Konstruksi Dataframe
+> nama <- c("Kroma", "Andra", "Aksara", "Antara", "Senja")
+
+> pekerjaan <- c("Manager", "Senior Data Scientist", "Data Analyst", "Data Engineer", "Senior Data Analyst")
+
+> periode_kerja <- c(5,2,1,1,3)
+
+> df <- data.frame(nama,pekerjaan,periode_kerja)
+
+> #Ubahlah semua data character yang ada pada Dataframe df menjadi huruf kecil
+> lapply(df, tolower)
+$nama
+[1] "kroma"  "andra"  "aksara" "antara" "senja" 
+
+$pekerjaan
+[1] "manager"               "senior data scientist" "data analyst"         
+[4] "data engineer"         "senior data analyst"  
+
+$periode_kerja
+[1] "5" "2" "1" "1" "3"
+
+
+> #Tampilkan kelas atau tipe data dari tiap kolom pada df dengan menggunakan lapply()
+> lapply(df,class)
+$nama
+[1] "character"
+
+$pekerjaan
+[1] "character"
+
+$periode_kerja
+[1] "numeric"
+
+> #Konstruksi Dataframe
+> nama <- c("Kroma", "Andra", "Aksara", "Antara", "Senja")
+
+> pekerjaan <- c("Manager", "Senior Data Scientist", "Data Analyst", "Data Engineer", "Senior Data Analyst")
+
+> periode_kerja <- c(5,2,1,1,3)
+
+> df <- data.frame(nama,pekerjaan,periode_kerja)
+
+> #Tampilkan kelas atau tipe data dari tiap kolom pada df dengan menggunakan lapply()
+> l_apply <- lapply(df, class)
+
+> #tampilkan isi dari variable l_apply
+> l_apply
+$nama
+[1] "character"
+
+$pekerjaan
+[1] "character"
+
+$periode_kerja
+[1] "numeric"
+
+
+> #tampilkan class dari variable l_apply
+> class(l_apply)
+[1] "list"
+
+> #Tampilkan kelas atau tipe data dari tiap kolom pada df dengan menggunakan sapply()
+> s_apply <- sapply(df, class)
+
+> #tampilkan isi dari variable s_apply
+> s_apply
+         nama     pekerjaan periode_kerja 
+  "character"   "character"     "numeric" 
+
+> #tampilkan class dari variable s_apply
+> class(s_apply)
+[1] "character"
+
+#IMPORT FILE CSV DAN TSV
+> #Gunakan function read.csv untuk import customer_segmentation.tsv
+> data <- read.csv("https://storage.googleapis.com/dqlab-dataset/customer_segments.txt", sep="\t")
+
+> #Tampilkan isi dari variable data
+> data
+   Customer_ID        Nama.Pelanggan Jenis.Kelamin Umur          Profesi
+1     CUST-001          Budi Anggara          Pria   58       Wiraswasta
+2     CUST-002      Shirley Ratuwati        Wanita   14          Pelajar
+3     CUST-003          Agus Cahyono          Pria   48     Professional
+4     CUST-004      Antonius Winarta          Pria   53     Professional
+5     CUST-005   Ibu Sri Wahyuni, IR        Wanita   41       Wiraswasta
+6     CUST-006       Rosalina Kurnia        Wanita   24     Professional
+7     CUST-007         Cahyono, Agus          Pria   64       Wiraswasta
+8     CUST-008        Danang Santosa          Pria   52     Professional
+9     CUST-009 Elisabeth Suryadinata        Wanita   29     Professional
+10    CUST-010        Mario Setiawan          Pria   33     Professional
+11    CUST-011        Maria Suryawan        Wanita   50     Professional
+12    CUST-012       Erliana Widjaja        Wanita   49     Professional
+13    CUST-013          Cahaya Putri        Wanita   64       Wiraswasta
+14    CUST-014        Mario Setiawan          Pria   60       Wiraswasta
+15    CUST-015      Shirley Ratuwati        Wanita   20       Wiraswasta
+16    CUST-016          Bambang Rudi          Pria   35     Professional
+17    CUST-017             Yuni Sari        Wanita   32 Ibu Rumah Tangga
+18    CUST-018           Nelly Halim        Wanita   63 Ibu Rumah Tangga
+19    CUST-019          Mega Pranoto        Wanita   32       Wiraswasta
+20    CUST-020        Irene Novianto        Wanita   16          Pelajar
+21    CUST-021      Lestari Fabianto        Wanita   38       Wiraswasta
+22    CUST-022          Novita Purba        Wanita   52     Professional
+23    CUST-023       Denny Amiruddin          Pria   34     Professional
+24    CUST-024         Putri Ginting        Wanita   39       Wiraswasta
+25    CUST-025        Julia Setiawan        Wanita   29       Wiraswasta
+26    CUST-026     Christine Winarto        Wanita   55     Professional
+27    CUST-027         Grace Mulyati        Wanita   35       Wiraswasta
+28    CUST-028         Adeline Huang        Wanita   40 Ibu Rumah Tangga
+29    CUST-029          Tia Hartanti        Wanita   56     Professional
+30    CUST-030        Rosita Saragih        Wanita   46 Ibu Rumah Tangga
+31    CUST-031         Eviana Handry        Wanita   19        Mahasiswa
+32    CUST-032       Chintya Winarni        Wanita   47       Wiraswasta
+33    CUST-033       Cecilia Kusnadi        Wanita   19        Mahasiswa
+34    CUST-034        Deasy Arisandi        Wanita   21       Wiraswasta
+35    CUST-035               Ida Ayu        Wanita   39     Professional
+36    CUST-036        Ni Made Suasti        Wanita   30       Wiraswasta
+37    CUST-037      Felicia Tandiono        Wanita   25     Professional
+38    CUST-038          Agatha Salim        Wanita   46       Wiraswasta
+39    CUST-039          Gina Hidayat        Wanita   20     Professional
+40    CUST-040        Irene Darmawan        Wanita   14          Pelajar
+41    CUST-041      Shinta Aritonang        Wanita   24 Ibu Rumah Tangga
+42    CUST-042          Yuliana Wati        Wanita   26       Wiraswasta
+43    CUST-043          Yenna Sumadi        Wanita   31     Professional
+44    CUST-044                  Anna        Wanita   18       Wiraswasta
+45    CUST-045        Rismawati Juni        Wanita   22     Professional
+46    CUST-046          Elfira Surya        Wanita   25       Wiraswasta
+47    CUST-047           Mira Kurnia        Wanita   55 Ibu Rumah Tangga
+48    CUST-048      Maria Hutagalung        Wanita   45       Wiraswasta
+49    CUST-049       Josephine Wahab        Wanita   33 Ibu Rumah Tangga
+50    CUST-050        Lianna Nugraha        Wanita   55       Wiraswasta
+   Tipe.Residen NilaiBelanjaSetahun
+1        Sector             9497927
+2       Cluster             2722700
+3       Cluster             5286429
+4       Cluster             5204498
+5       Cluster            10615206
+6       Cluster             5215541
+7        Sector             9837260
+8       Cluster             5223569
+9        Sector             5993218
+10      Cluster             5257448
+11       Sector             5987367
+12       Sector             5941914
+13      Cluster             9333168
+14      Cluster             9471615
+15      Cluster            10365668
+16      Cluster             5262521
+17      Cluster             5677762
+18      Cluster             5340690
+19      Cluster            10884508
+20       Sector             2896845
+21      Cluster             9222070
+22      Cluster             5298157
+23      Cluster             5239290
+24      Cluster            10259572
+25       Sector            10721998
+26      Cluster             5269392
+27      Cluster             9114159
+28      Cluster             6631680
+29      Cluster             5271845
+30       Sector             5020976
+31      Cluster             3042773
+32       Sector            10663179
+33      Cluster             3047926
+34       Sector             9759822
+35       Sector             5962575
+36      Cluster             9678994
+37       Sector             5972787
+38       Sector            10477127
+39      Cluster             5257775
+40       Sector             2861855
+41      Cluster             6820976
+42      Cluster             9880607
+43      Cluster             5268410
+44      Cluster             9339737
+45      Cluster             5211041
+46       Sector            10099807
+47      Cluster             6130724
+48       Sector            10390732
+49       Sector             4992585
+50       Sector            10569316
+
+> #Konstruksi Dataframe
+> nama <- c("Andra","Andra","Senja","Senja","Aksara","Aksara","Kroma","Kroma")
+
+> hari <- c("Senin","Selasa","Senin","Selasa","Senin","Selasa","Senin","Selasa")
+
+> jam_kerja <- c(8,9,8,8,9,9,8,10)
+
+> data <- data.frame(nama,hari,jam_kerja)
+
+> data
+    nama   hari jam_kerja
+1  Andra  Senin         8
+2  Andra Selasa         9
+3  Senja  Senin         8
+4  Senja Selasa         8
+5 Aksara  Senin         9
+6 Aksara Selasa         9
+7  Kroma  Senin         8
+8  Kroma Selasa        10
+
+> #Jumlah jam kerja tiap individu
+> aggregate(data$jam_kerja, list(data$nama), sum)
+  Group.1  x
+1  Aksara 18
+2   Andra 17
+3   Kroma 18
+4   Senja 16
+
+> #Rata-rata jam kerja berdasarkan hari
+> aggregate(data$jam_kerja, list(data$hari), mean)
+  Group.1    x
+1  Selasa 9.00
+2   Senin 8.25
+
+MINI PROJECT
+> #Import data customer_segmentation.tsv dan simpan ke dalam variable data_customer
+> data_customer <- read.csv("https://storage.googleapis.com/dqlab-dataset/customer_segments.txt", sep="\t")
+
+> #Ubah data_customer menjadi Dataframe dengan as.data.frame jika belum merupakan Dataframe
+> if (!is.data.frame(data_customer))
++     data_customer <- as.data.frame(data_customer)
+
+> #Tampilkan 5 data teratas dari data_customer
+> head(data_customer, 5)
+  Customer_ID      Nama.Pelanggan Jenis.Kelamin Umur      Profesi Tipe.Residen
+1    CUST-001        Budi Anggara          Pria   58   Wiraswasta       Sector
+2    CUST-002    Shirley Ratuwati        Wanita   14      Pelajar      Cluster
+3    CUST-003        Agus Cahyono          Pria   48 Professional      Cluster
+4    CUST-004    Antonius Winarta          Pria   53 Professional      Cluster
+5    CUST-005 Ibu Sri Wahyuni, IR        Wanita   41   Wiraswasta      Cluster
+  NilaiBelanjaSetahun
+1             9497927
+2             2722700
+3             5286429
+4             5204498
+5            10615206
+
+> #Tampilkan 5 data terbawah dari data_customer
+> tail(data_customer, 5)
+   Customer_ID   Nama.Pelanggan Jenis.Kelamin Umur          Profesi
+46    CUST-046     Elfira Surya        Wanita   25       Wiraswasta
+47    CUST-047      Mira Kurnia        Wanita   55 Ibu Rumah Tangga
+48    CUST-048 Maria Hutagalung        Wanita   45       Wiraswasta
+49    CUST-049  Josephine Wahab        Wanita   33 Ibu Rumah Tangga
+50    CUST-050   Lianna Nugraha        Wanita   55       Wiraswasta
+   Tipe.Residen NilaiBelanjaSetahun
+46       Sector            10099807
+47      Cluster             6130724
+48       Sector            10390732
+49       Sector             4992585
+50       Sector            10569316
+
+> #Tampilkan struktur dari data_customer
+> str(data_customer)
+'data.frame':	50 obs. of  7 variables:
+ $ Customer_ID        : chr  "CUST-001" "CUST-002" "CUST-003" "CUST-004" ...
+ $ Nama.Pelanggan     : chr  "Budi Anggara" "Shirley Ratuwati" "Agus Cahyono" "Antonius Winarta" ...
+ $ Jenis.Kelamin      : chr  "Pria" "Wanita" "Pria" "Pria" ...
+ $ Umur               : int  58 14 48 53 41 24 64 52 29 33 ...
+ $ Profesi            : chr  "Wiraswasta" "Pelajar" "Professional" "Professional" ...
+ $ Tipe.Residen       : chr  "Sector" "Cluster" "Cluster" "Cluster" ...
+ $ NilaiBelanjaSetahun: int  9497927 2722700 5286429 5204498 10615206 5215541 9837260 5223569 5993218 5257448 ...
+
+> #Gunakan function lapply() untuk melihat tipe data dari masing-masing kolom pada data_customer
+> lapply(data_customer, class)
+$Customer_ID
+[1] "character"
+
+$Nama.Pelanggan
+[1] "character"
+
+$Jenis.Kelamin
+[1] "character"
+
+$Umur
+[1] "integer"
+
+$Profesi
+[1] "character"
+
+$Tipe.Residen
+[1] "character"
+
+$NilaiBelanjaSetahun
+[1] "integer"
+
+
+> #Rata-rata umur dari tiap jenis kelamin
+> aggregate(data_customer$Umur, list(data_customer$Jenis.Kelamin), mean)
+  Group.1        x
+1    Pria 48.55556
+2  Wanita 35.07317
+
+> #Jumlah individu untuk setiap profesi (gunakan FUN = length)
+> aggregate(data_customer$Profesi, list(data_customer$Profesi), length)
+           Group.1  x
+1 Ibu Rumah Tangga  7
+2        Mahasiswa  2
+3          Pelajar  3
+4     Professional 18
+5       Wiraswasta 20
+
+> #Rata-rata nilai belanja setahun berdasarkan profesi
+> aggregate(data_customer$NilaiBelanjaSetahun, list(data_customer$Profesi), mean)
+           Group.1        x
+1 Ibu Rumah Tangga  5802199
+2        Mahasiswa  3045350
+3          Pelajar  2827133
+4     Professional  5451321
+5       Wiraswasta 10009124
 
